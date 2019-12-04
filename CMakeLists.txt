@@ -10,8 +10,17 @@ project (${PROG_NAME})
 # --------------------------------------------------------- #
 # Sources                                           #
 # --------------------------------------------------------- #
-set(BOHRIUM_SRCS src/bohrium.c)
-set(BOHRIUM_HDRS include/bohrium.h)
+set(BOHRIUM_SRCS 
+    src/bohrium.c
+    src/guid.c
+    src/plugin.c
+)
+
+set(BOHRIUM_HDRS
+    include/bohrium.h
+    include/guid.h
+    include/plugin.h
+)
 
 # --------------------------------------------------------- #
 # Bohrium library                                             #
