@@ -8,7 +8,7 @@ set(LIB_NAME Lib${PROG_NAME})
 project (${PROG_NAME})
 
 # --------------------------------------------------------- #
-# Sources                                           #
+# Sources                                                   #
 # --------------------------------------------------------- #
 set(BOHRIUM_SRCS 
     src/bohrium.c
@@ -23,7 +23,7 @@ set(BOHRIUM_HDRS
 )
 
 # --------------------------------------------------------- #
-# Bohrium library                                             #
+# Bohrium library                                           #
 # --------------------------------------------------------- #
 add_library(${LIB_NAME} ${BOHRIUM_SRCS} ${BOHRIUM_HDRS})
 
