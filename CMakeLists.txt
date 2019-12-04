@@ -56,3 +56,12 @@ endif()
 # --------------------------------------------------------- #
 set_property(TARGET ${LIB_NAME} PROPERTY C_STANDARD 11)
 set_property(TARGET ${LIB_NAME} PROPERTY C_STANDARD_REQUIRED ON)
+
+# --------------------------------------------------------- #
+# Libraries                                                 #
+# --------------------------------------------------------- #
+if(MINGW)
+  add_compile_definitions(_SSIZE_T_)
+endif()
+add_subdirectory(lib/zip)
+target_link_libraries(${LIB_NAME} PUBLIC zip)
