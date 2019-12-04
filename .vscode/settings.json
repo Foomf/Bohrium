@@ -1,0 +1,7 @@
+{
+    "terminal.integrated.shell.windows": "C:\\MinGW\\msys\\1.0\\bin\\sh.exe",
+    "terminal.integrated.shellArgs.windows": [
+        "--login",
+        "-i"
+    ]
+}
