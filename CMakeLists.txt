@@ -8,12 +8,6 @@ set(LIB_NAME Lib${PROG_NAME})
 project (${PROG_NAME})
 
 # --------------------------------------------------------- #
-# C++ 17 standard                                           #
-# --------------------------------------------------------- #
-# set(CMAKE_CXX_STANDARD 17)
-# set(CMAKE_CXX_STANDARD_REQUIRED ON)
-
-# --------------------------------------------------------- #
 # Sources                                           #
 # --------------------------------------------------------- #
 set(BOHRIUM_SRCS src/bohrium.c)
@@ -38,3 +32,18 @@ if(${BOHRIUM_SERVER_EXECUTABLE})
     add_executable(${PROG_NAME} ${CMAKE_CURRENT_SOURCE_DIR}/src/main.c)
     target_link_libraries(${PROG_NAME} ${LIB_NAME})
 endif(${BOHRIUM_SERVER_EXECUTABLE})
+
+# --------------------------------------------------------- #
+# Set compile options                                       #
+# --------------------------------------------------------- #
+if(MSVC)
+  target_compile_options(${LIB_NAME} PRIVATE /W4 /WX)
+else()
+  target_compile_options(${LIB_NAME} PRIVATE -Wall -Wextra -pedantic -Werror)
+endif()
+
+# --------------------------------------------------------- #
+# C11 standard                                              #
+# --------------------------------------------------------- #
+set_property(TARGET ${LIB_NAME} PROPERTY C_STANDARD 11)
+set_property(TARGET ${LIB_NAME} PROPERTY C_STANDARD_REQUIRED ON)
