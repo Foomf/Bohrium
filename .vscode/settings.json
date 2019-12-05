@@ -6,5 +6,6 @@
     ],
     "files.associations": {
         "boh_except.h": "c"
-    }
+    },
+    "cmake.configureOnOpen": false
 }

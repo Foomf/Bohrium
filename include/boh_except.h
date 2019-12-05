@@ -19,3 +19,9 @@ char boh_full_message[boh_complete_message_size];
 void boh_throw_except(CEXCEPTION_T id, char* file, int line_num, char* msg);
 
 void boh_except_reset(void);
+
+enum ExceptionType {
+    BOH_ERR_NONE = 0,
+    BOH_ERR_UNKNOWN = 1,
+    BOH_ERR_OUT_OF_MEMORY = 2
+};
