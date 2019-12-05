@@ -11,15 +11,19 @@ project (${PROG_NAME})
 # Sources                                                   #
 # --------------------------------------------------------- #
 set(BOHRIUM_SRCS 
+    lib/cexception/lib/CException.c
     src/bohrium.c
     src/guid.c
     src/plugin.c
+    src/boh_except.c
 )
 
 set(BOHRIUM_HDRS
+  lib/cexception/lib/CException.h
     include/bohrium.h
     include/guid.h
     include/plugin.h
+    include/boh_except.h
 )
 
 # --------------------------------------------------------- #
@@ -31,6 +35,7 @@ add_library(${LIB_NAME} ${BOHRIUM_SRCS} ${BOHRIUM_HDRS})
 # Include directories                                       #
 # --------------------------------------------------------- #
 target_include_directories(${LIB_NAME} PUBLIC include
+  lib/cexception/lib
 )
 
 # --------------------------------------------------------- #

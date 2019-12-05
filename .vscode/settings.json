@@ -3,5 +3,8 @@
     "terminal.integrated.shellArgs.windows": [
         "--login",
         "-i"
-    ]
+    ],
+    "files.associations": {
+        "boh_except.h": "c"
+    }
 }
