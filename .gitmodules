@@ -4,3 +4,6 @@
 [submodule "lib/cexception"]
 	path = lib/cexception
 	url = https://github.com/throwtheswitch/cexception.git
+[submodule "lib/zf_log"]
+	path = lib/zf_log
+	url = git@github.com:wonder-mice/zf_log.git
