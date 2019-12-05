@@ -70,3 +70,6 @@ if(MINGW)
 endif()
 add_subdirectory(lib/zip)
 target_link_libraries(${LIB_NAME} PUBLIC zip)
+
+add_subdirectory(lib/zf_log)
+target_link_libraries(${LIB_NAME} PUBLIC zf_log)

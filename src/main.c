@@ -8,6 +8,8 @@
 
 #include "zip.h"
 
+#include "zf_log.h"
+
 void feef(void) {
     //Throw (10);
 }
@@ -18,7 +20,8 @@ void err(void) {
 }
 
 int main(void) {
-    boh_except_reset();
+    ZF_LOGI("Hello!");
+    // boh_except_reset();
 
     // CEXCEPTION_T e;
     // Try {
@@ -27,7 +30,7 @@ int main(void) {
     //     printf("Caught %i\n", e);
     // }
 
-    boh_throw(10);
+    // boh_throw(10);
 
     // struct zip_t* zip = zip_open("Boostnote.zip", 0, 'r');
     // int entry_count = zip_total_entries(zip);
@@ -47,6 +50,8 @@ int main(void) {
     // wchar_t* s = guid_to_string(&p.plugin_id);
     // wprintf(L"Generated guid: %ls\n", s);
     // free(s);
+
+
 
     return EXIT_SUCCESS;
 }
