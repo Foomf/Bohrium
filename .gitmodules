@@ -1,3 +1,6 @@
 [submodule "lib/zip"]
 	path = lib/zip
 	url = https://github.com/kuba--/zip
+[submodule "lib/cexception"]
+	path = lib/cexception
+	url = https://github.com/throwtheswitch/cexception.git
