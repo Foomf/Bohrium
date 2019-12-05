@@ -11,24 +11,24 @@
 #include "zf_log.h"
 
 void feef(void) {
-    //Throw (10);
+    ZF_LOGI("Throw");
+    boh_throwmsg(10, "Something went wrong.");
 }
 
 void err(void) {
     feef();
-    printf("Meem\n");
 }
 
 int main(void) {
-    ZF_LOGI("Hello!");
-    // boh_except_reset();
+    // ZF_LOGI("Hello!");
+    boh_except_reset();
 
-    // CEXCEPTION_T e;
-    // Try {
-    //     err();
-    // } Catch (e) {
-    //     printf("Caught %i\n", e);
-    // }
+    CEXCEPTION_T e;
+    Try {
+        err();
+    } Catch (e) {
+        ZF_LOGE(boh_full_message);
+    }
 
     // boh_throw(10);
 
