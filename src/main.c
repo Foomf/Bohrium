@@ -23,12 +23,12 @@ int main(void) {
     // ZF_LOGI("Hello!");
     boh_except_reset();
 
-    CEXCEPTION_T e;
-    Try {
-        err();
-    } Catch (e) {
-        ZF_LOGE(boh_full_message);
-    }
+    // CEXCEPTION_T e;
+    // Try {
+    //     err();
+    // } Catch (e) {
+    //     ZF_LOGE(boh_full_message);
+    // }
 
     // boh_throw(10);
 
@@ -45,11 +45,12 @@ int main(void) {
 
     // zip_close(zip);
 
-    // plugin p;
-    // plugin_init(&p);
-    // wchar_t* s = guid_to_string(&p.plugin_id);
-    // wprintf(L"Generated guid: %ls\n", s);
-    // free(s);
+    printf("Hi\n");
+    plugin p;
+    plugin_init(&p);
+    sds s = guid_to_string(&p.plugin_id);
+    printf("Generated guid: %s\n", s);
+    sdsfree(s);
 
 
 

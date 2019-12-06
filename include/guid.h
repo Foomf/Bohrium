@@ -1,6 +1,8 @@
 #pragma once
 
-#include <wchar.h>
+#include "sds.h"
+
+#define GUID_STRING_LEN 36
 
 #ifdef _WIN32
 #include <objbase.h>
@@ -9,4 +11,4 @@ typedef GUID BOH_GUID;
 
 void make_guid(BOH_GUID* guid);
 
-wchar_t* guid_to_string(BOH_GUID* self);
+sds guid_to_string(BOH_GUID* self);

@@ -12,16 +12,23 @@ void make_guid(BOH_GUID* guid) {
     }
 }
 
-wchar_t* guid_to_string(BOH_GUID* self) {
+sds guid_to_string(BOH_GUID* self) {
+    // Use windows api to generate guid string
     OLECHAR* str;
     if (StringFromCLSID(self, &str) != S_OK) {
         boh_throw(BOH_ERR_OUT_OF_MEMORY);
     }
-    size_t len = wcslen(str);
-    wchar_t* out = calloc(1, sizeof(wchar_t) * (len + 1));
-    wcsncpy(out, str, len);
+
+    // Copy string to buffer, then delete the string
+    // allocated by windows. The str pointer is offset
+    // by 1 because the windows string function adds {}
+    // characters around the guid string.
+    char buff[GUID_STRING_LEN];
+    wcstombs(buff, str + 1, sizeof(buff));
     CoTaskMemFree(str);
-    return out;
+
+    // Copy buffer to sds managed string and return.
+    return sdsnewlen(buff, sizeof(buff));
 }
 
 #endif
