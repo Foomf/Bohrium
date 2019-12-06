@@ -10,3 +10,6 @@
 [submodule "lib/mlib"]
 	path = lib/mlib
 	url = git@github.com:P-p-H-d/mlib.git
+[submodule "lib/sds"]
+	path = lib/sds
+	url = git@github.com:antirez/sds.git
