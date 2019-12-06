@@ -36,6 +36,7 @@ add_library(${LIB_NAME} ${BOHRIUM_SRCS} ${BOHRIUM_HDRS})
 # --------------------------------------------------------- #
 target_include_directories(${LIB_NAME} PUBLIC include
   lib/cexception/lib
+  lib/mlib
 )
 
 # --------------------------------------------------------- #
