@@ -13,3 +13,6 @@
 [submodule "lib/sds"]
 	path = lib/sds
 	url = git@github.com:antirez/sds.git
+[submodule "lib/cute_headers"]
+	path = lib/cute_headers
+	url = https://github.com/RandyGaul/cute_headers

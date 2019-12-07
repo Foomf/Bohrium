@@ -39,6 +39,7 @@ target_include_directories(${LIB_NAME} PUBLIC include
   lib/cexception/lib
   lib/mlib
   lib/sds
+  lib/cute_headers
 )
 
 # --------------------------------------------------------- #
