@@ -5,7 +5,8 @@
         "-i"
     ],
     "files.associations": {
-        "boh_except.h": "c"
+        "boh_except.h": "c",
+        "plugin_loader.h": "c"
     },
     "cmake.configureOnOpen": false
 }

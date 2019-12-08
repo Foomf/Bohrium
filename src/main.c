@@ -10,6 +10,8 @@
 
 #include "zf_log.h"
 
+#include "plugin_loader.h"
+
 void feef(void) {
     ZF_LOGI("Throw");
     boh_throwmsg(10, "Something went wrong.");
@@ -22,6 +24,8 @@ void err(void) {
 int main(void) {
     // ZF_LOGI("Hello!");
     boh_except_reset();
+
+    list_plugins();
 
     // CEXCEPTION_T e;
     // Try {

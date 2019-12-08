@@ -17,14 +17,17 @@ set(BOHRIUM_SRCS
     src/guid.c
     src/plugin.c
     src/boh_except.c
+    src/plugin_loader.c
+    src/cute_files_impl.c
 )
 
 set(BOHRIUM_HDRS
-  lib/cexception/lib/CException.h
+    lib/cexception/lib/CException.h
     include/bohrium.h
     include/guid.h
     include/plugin.h
     include/boh_except.h
+    include/plugin_loader.h
 )
 
 # --------------------------------------------------------- #
